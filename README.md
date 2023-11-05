@@ -10,13 +10,11 @@ Preparar su propia rama como entorno de trabajo local:
 3. git checkout [rama-tarea-que-esten-trabajando]
 
 ## EJECUTAR EL FRONTEND
-------------------------
 1. colocarse en la carpeta /react_website_cliente
 2. npm install --force
 3. npm run dev
 
 ## EJECUTAR EL BACKEND (opcional para el Sprint 1)
-------------------------
 1. colocarse en la carpeta /jovenes-stem-website-app
 2. python manage.py runserver
 3. entrar a http://127.0.0.1:8000/content/api/
