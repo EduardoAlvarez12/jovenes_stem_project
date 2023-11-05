@@ -19,13 +19,13 @@ Preparar su propia rama como entorno de trabajo local:
 2. python manage.py runserver
 3. entrar a http://127.0.0.1:8000/content/api/
 
-### REALIZAR UN PUSH
+## REALIZAR UN PUSH
 1. colocarse en la carpeta y rama adecuada
 2. git add .
 3. git commit -m "mensaje-corto-tarea-que-trabajé"
 4. git push origin [rama-tarea-que-esten-trabajando]
 
-### REALIZAR UN PULL REQUEST
+## REALIZAR UN PULL REQUEST
 1. realizar un pull request desde el repositorio de GitHub
 2. una vez aprobado se mezclara su rama con la main
 3. es importante mantener su rama propia actualizada
