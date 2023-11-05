@@ -42,7 +42,7 @@ export function SwipeableTextMobileStepper({ images }) {
           bgcolor: "background.default",
         }}
       >
-        <Typography>{images[activeStep].label}</Typography>
+        <Typography>{images[activeStep].title}</Typography>
       </Paper> */}
 
       <AutoPlaySwipeableViews
@@ -52,7 +52,7 @@ export function SwipeableTextMobileStepper({ images }) {
         enableMouseEvents
       >
         {images.map((step, index) => (
-          <div key={step.label}>
+          <div key={step.title}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 component="div"
@@ -63,8 +63,8 @@ export function SwipeableTextMobileStepper({ images }) {
                 }}
               >
                 <img
-                  src={step.imgPath}
-                  alt={step.label}
+                  src={step.cloud_image_url}
+                  alt={step.title}
                   style={{
                     display: "block",
                     width: "100%",
@@ -83,7 +83,7 @@ export function SwipeableTextMobileStepper({ images }) {
                     padding: "5px",
                   }}
                 >
-                  {step.label}
+                  {step.title}
                 </Typography>
               </Box>
             ) : null}
