@@ -4,10 +4,10 @@ Este repositorio aloja la API encargada de gestionar contenido y el frontend par
 ## DESCARGA DEL PROYECTO
 1. git clone [enlace]
 
-Preparar su propia rama como entorno de trabajo local:
-2. cd [repositorio]
-2. git branch [rama-tarea-que-esten-trabajando]
-3. git checkout [rama-tarea-que-esten-trabajando]
+2. Preparar su propia rama como entorno de trabajo local:
+3. cd [repositorio]
+4. git branch [rama-tarea-que-esten-trabajando]
+5. git checkout [rama-tarea-que-esten-trabajando]
 
 ## EJECUTAR EL FRONTEND
 1. colocarse en la carpeta /react_website_cliente
