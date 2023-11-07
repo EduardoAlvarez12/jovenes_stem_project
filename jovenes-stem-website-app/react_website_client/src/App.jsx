@@ -6,7 +6,6 @@ import { HistoryPage } from "./pages/HistoryPage";
 import { MemoryPage } from "./pages/MemoryPage";
 import { Navigation } from "./components/Navigation";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Box } from "@mui/material";
 
 const jov_stem_theme = createTheme({
   palette: {

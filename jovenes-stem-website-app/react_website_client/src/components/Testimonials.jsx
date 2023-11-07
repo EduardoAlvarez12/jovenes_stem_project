@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 export function Testimonials({ testimonialImages }) {
   return (
     <Carousel
-      showArrows={true}
+      showArrows={false}
       infiniteLoop={true}
       showThumbs={false}
       showStatus={false}
