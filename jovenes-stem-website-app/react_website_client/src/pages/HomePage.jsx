@@ -1,9 +1,10 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
-import { CarouselLand } from "../components/CarouselLand";
-import { Container, Typography } from "@mui/material";
+import { SwipeableTextMobileStepper } from "../components/Carousel";
+import {  Typography } from "@mui/material";
 import StandardImageList from '../components/Card'
+import { Testimonials } from "../components/Testimonials";
 
 const images = [
   {
@@ -35,6 +36,25 @@ const images = [
 
 ];
 
+const testimonialImages = [
+  {
+    title: "Shirley Fultz",
+    description:
+      "It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site",
+    cloud_image_url: "https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png",
+  },
+  {
+    title: "Daniel Keystone",
+    description: "The simple and intuitive design makes it easy for me use. I highly recommend Fetch to my peers.",
+    cloud_image_url: "https://creazilla-store.fra1.digitaloceanspaces.com/icons/7914838/woman-icon-md.png"
+  },
+  {
+    title: "Theo Sorel",
+    description: "I enjoy catching up with Fetch on my laptop, or on my phone when I'm on the go!",
+    cloud_image_url:"https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-No-Background.png",
+  },
+];
+
 
 export function HomePage() {
   return (
@@ -48,13 +68,11 @@ export function HomePage() {
           boxShadow:
             "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
         }}>
-
-        <CarouselLand images={images} />
+        <SwipeableTextMobileStepper images={images} />
       </Box>
       </div>
-
       <StandardImageList/>
-     
+      <Testimonials testimonialImages={testimonialImages} />
     </div>
   );
 }

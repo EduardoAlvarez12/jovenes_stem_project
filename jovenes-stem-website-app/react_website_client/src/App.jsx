@@ -7,6 +7,8 @@ import { MemoryPage } from "./pages/MemoryPage";
 import { Navigation } from "./components/Navigation";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+
+
 const jov_stem_theme = createTheme({
   palette: {
     indigo: {
@@ -26,12 +28,13 @@ const jov_stem_theme = createTheme({
   },
 });
 
+
 function App() {
   return (
     <BrowserRouter>
       <ThemeProvider theme={jov_stem_theme}>
         <Navigation />
-        
+
           <Routes>
           <Route path="/home" element={<HomePage />} />
             <Route path="/content" element={<ContentApiPlaceholder />} />
@@ -39,9 +42,9 @@ function App() {
             <Route path="/historia" element={<HistoryPage />} />
             <Route path="/memorias" element={<MemoryPage />} />
           </Routes>
-       
       </ThemeProvider>
     </BrowserRouter>
+
   );
 }
 
