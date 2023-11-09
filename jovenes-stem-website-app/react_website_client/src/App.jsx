@@ -33,8 +33,8 @@ function App() {
         <Navigation />
         
           <Routes>
+          <Route path="/home" element={<HomePage />} />
             <Route path="/content" element={<ContentApiPlaceholder />} />
-            <Route path="/home" element={<HomePage />} />
             <Route path="/filosofia" element={<PhilosophyPage />} />
             <Route path="/historia" element={<HistoryPage />} />
             <Route path="/memorias" element={<MemoryPage />} />
