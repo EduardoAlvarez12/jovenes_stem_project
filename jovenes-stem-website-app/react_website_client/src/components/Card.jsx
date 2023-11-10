@@ -19,18 +19,18 @@ export default function StandardImageList() {
         justifyContent="center"
         alignItems="center">
           <Grid item>
-      <Card sx={{ maxWidth: 400 }}>
+      <Card sx={{ maxWidth: 400 }} >
       <CardActionArea>
         <CardMedia
           component="img"
           height="170"
           src='https://drive.google.com/uc?export=view&id=1-gzE5ZH_UnwIZahr_jvFaeY36nQWNv5G&rl' 
-          alt="green iguana"
+          alt="Clases Tecnologia"
         />
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
-           Impartimos clases teoricas y practicas,actividades
-            recreativas y de convivencia.
+          <Typography variant="body2">
+           Impartimos clases teóricas y prácticas con instructores 
+           capacitados con conocimiento, mejorando tu aprendizaje.
 
           </Typography>
         </CardContent>
@@ -46,13 +46,13 @@ export default function StandardImageList() {
           component="img"
           height="170"
           src='https://drive.google.com/uc?export=view&id=1YdgylRhy-J4b3VfMSMWqswIVJGwDqqMz&rl' 
-          alt="green iguana"
+          alt="visita tecnica"
         />
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
-              Realizamos visitas tecnicas a empresas de Desarrollo,
-              con el fin de que los jovenes tengan interes en el
-              area de Ingenieria y Tecnologia.
+          <Typography variant="body2">
+              Realizamos visitas técnicas a empresas de desarrollo,
+              con el fin de que los jóvenes tengan interés en el
+              área de Ingeniería y Tecnología.
 
           </Typography>
         </CardContent>
@@ -60,6 +60,48 @@ export default function StandardImageList() {
     </Card>
 
           </Grid>
+
+          <Grid item>
+      <Card sx={{ maxWidth: 400 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="200"
+          src='https://drive.google.com/uc?export=view&id=1eyff9zvw8qe4ZaBseYn8ubyBhp7MdtjF&rl' 
+          alt="actividad recreativa"
+        />
+        <CardContent>
+          <Typography variant="body2">
+           La conviencia y apoyo en vital en nuestro grupo, 
+           realizamos actividades recreativas para todos los gusto.
+
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+          
+          </Grid>
+          <Grid item>
+      <Card sx={{ maxWidth: 400 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="200"
+          src='https://drive.google.com/uc?export=view&id=1Cc4Yj2mHS4nbKJc8aY8YlYkdc8IAYnka&rl' 
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography variant="body2" >
+           Brindamos asistencia presencial y virtual para 
+           todos nuestro alumnos con mucha dedicación y solventar dudas.
+
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+          
+          </Grid>
+          
         </Grid>
  
       </Container>
