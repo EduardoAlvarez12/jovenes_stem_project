@@ -8,6 +8,17 @@ import Box from '@mui/material/Box';
 import { SwipeableTextMobileStepper } from "../components/Carousel";
 
 export function ControlledAccordions() {
+    const groupedData = [
+        { year: 2016, images: año_2016 },
+        { year: 2017, images: año_2017 },
+        { year: 2018, images: año_2018 },
+        { year: 2019, images: año_2019 },
+        { year: 2020, images: año_2020 },
+        { year: 2021, images: año_2021 },
+        { year: 2022, images: año_2022 },
+        { year: 2023, images: año_2023 },
+    ];
+
     const [expanded, setExpanded] = React.useState(false);
 
     const handleChange = (panel) => (event, isExpanded) => {
@@ -15,190 +26,46 @@ export function ControlledAccordions() {
     };
 
     return (
-        <div>
-            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1bh-content"
-                    id="panel1bh-header"
+        <Box sx={{ width: '100%', margin: 'center' }}>
+            {groupedData.map(({ year, images }, index) => (
+                <Accordion
+                    key={index}
+                    expanded={expanded === `panel${index + 1}`}
+                    onChange={handleChange(`panel${index + 1}`)}
+                    style={{ width: '80%' }}
                 >
-                    <Typography variant="h6">2016</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Box
-                        sx={{
-                            background:
-                                "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
-                            boxShadow:
-                                "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
-                        }}
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls={`panel${index + 1}bh-content`}
+                        id={`panel${index + 1}bh-header`}
                     >
-                        <SwipeableTextMobileStepper images={images0} />
-                    </Box>
-                </AccordionDetails>
-            </Accordion>
-
-            <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2bh-content"
-                    id="panel2bh-header" >
-                    <Typography variant="h6">2017</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Box
-                        sx={{
-                            background:
-                                "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
-                            boxShadow:
-                                "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
-                        }}
-                    >
-                        <SwipeableTextMobileStepper images={images1} />
-                    </Box>
-                </AccordionDetails>
-            </Accordion>
-
-            <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel3bh-content"
-                    id="panel3bh-header"
-                >
-                    <Typography variant="h6">2018</Typography>
-                </AccordionSummary>
-                <AccordionDetails>      
-                    <Box
-                        sx={{
-                            background:
-                                "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
-                            boxShadow:
-                                "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
-                        }}
-                    >
-                        <SwipeableTextMobileStepper images={images2} />
-                    </Box>
-                </AccordionDetails>
-            </Accordion>
-
-            <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel4bh-content"
-                    id="panel4bh-header"
-                >
-                    <Typography variant="h6">2019</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Box
-                        sx={{
-                            background:
-                                "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
-                            boxShadow:
-                                "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
-                        }}
-                    >
-                        <SwipeableTextMobileStepper images={images3} />
-                    </Box>
-                </AccordionDetails>
-            </Accordion>
-
-            <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel5bh-content"
-                    id="panel5bh-header"
-                >
-                    <Typography variant="h6">2020</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Box
-                        sx={{
-                            background:
-                                "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
-                            boxShadow:
-                                "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
-                        }}
-                    >
-                        <SwipeableTextMobileStepper images={images4} />
-                    </Box>
-                </AccordionDetails>
-            </Accordion>
-
-            <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel6bh-content"
-                    id="panel6bh-header"
-                >
-                    <Typography variant="h6">2021</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Box
-                        sx={{
-                            background:
-                                "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
-                            boxShadow:
-                                "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
-                        }}
-                    >
-                        <SwipeableTextMobileStepper images={images5} />
-                    </Box>
-                </AccordionDetails>
-            </Accordion>
-
-            <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel7bh-content"
-                    id="panel7bh-header"
-                >
-                    <Typography variant="h6">2022</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Box
-                        sx={{
-                            background:
-                                "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
-                            boxShadow:
-                                "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
-                        }}
-                    >
-                        <SwipeableTextMobileStepper images={images6} />
-                    </Box>
-                </AccordionDetails>
-            </Accordion>
-
-            <Accordion expanded={expanded === 'panel8'} onChange={handleChange('panel8')} >
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel8bh-content "
-                    id="panel8bh-header"
-                >
-                    <Typography variant="h6">2023</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Box
-                        sx={{
-                            background:
-                                "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
-                            boxShadow:
-                                "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
-                        }}
-                    >
-                        <SwipeableTextMobileStepper images={images7} />
-                    </Box>
-                </AccordionDetails>
-            </Accordion>
-        </div>
+                        <Typography variant="h6">{year}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Box
+                            sx={{
+                                background:
+                                    "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
+                                boxShadow:
+                                    "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
+                            }}
+                        >
+                            <SwipeableTextMobileStepper images={images} />
+                        </Box>
+                    </AccordionDetails>
+                </Accordion>
+            ))}
+        </Box>
     );
 }
-const images0 = [
+
+
+const año_2016 = [
     {
         title: "TecnoGirls 2016",
         cloud_image_url:
             "https://i.imgur.com/tTpdEcT.png",
-        },
+    },
     {
         title: "TecnoGirls 2016",
         cloud_image_url:
@@ -227,16 +94,16 @@ const images0 = [
 
 ];
 
-const images1= [
+const año_2017 = [
     {
         title: "TecnoGirls 2017",
         cloud_image_url:
             "https://i.imgur.com/jOb5e2b.png",
-        },
+    },
     {
         title: "TecnoGirls 2017",
         cloud_image_url:
-           "https://i.imgur.com/deFUc84.png",
+            "https://i.imgur.com/deFUc84.png",
     },
 
     {
@@ -263,12 +130,12 @@ const images1= [
     },
 ];
 
-const images2 = [
+const año_2018 = [
     {
         title: "TecnoGirls 2018",
         cloud_image_url:
             "https://i.imgur.com/ZcWDQgA.png",
-        },
+    },
     {
         title: "TecnoGirls 2018",
         cloud_image_url:
@@ -286,12 +153,12 @@ const images2 = [
     },
 ];
 
-const images3 = [
+const año_2019 = [
     {
         title: "TecnoGirls 2019",
         cloud_image_url:
             "https://i.imgur.com/AaiEO41.png",
-        },
+    },
     {
         title: "TecnoGirls 2019",
         cloud_image_url:
@@ -319,12 +186,12 @@ const images3 = [
     },
 ];
 
-const images4 = [
+const año_2020 = [
     {
         title: "TecnoGirls 2020",
         cloud_image_url:
             "https://i.imgur.com/J1ff06A.png",
-        },
+    },
     {
         title: "TecnoGirls 2020",
         cloud_image_url:
@@ -347,12 +214,12 @@ const images4 = [
     },
 ];
 
-const images5 = [
+const año_2021 = [
     {
         title: "TecnoGirls 2021",
         cloud_image_url:
             "https://i.imgur.com/xwXqIcx.png",
-        },
+    },
     {
         title: "TecnoGirls 2021",
         cloud_image_url:
@@ -380,12 +247,12 @@ const images5 = [
     },
 ];
 
-const images6 = [
+const año_2022 = [
     {
         title: "TecnoGirls 2022",
         cloud_image_url:
             "https://i.imgur.com/j544m5l.png",
-        },
+    },
     {
         title: "TecnoGirls 2022",
         cloud_image_url:
@@ -413,12 +280,12 @@ const images6 = [
     },
 ];
 
-const images7= [
+const año_2023 = [
     {
         title: "TecnoGirls y Jóvenes en STEM 2023",
         cloud_image_url:
             "https://i.imgur.com/giYp5u0.jpg",
-        },
+    },
     {
         title: "TecnoGirls y Jóvenes en STEM 2023",
         cloud_image_url:

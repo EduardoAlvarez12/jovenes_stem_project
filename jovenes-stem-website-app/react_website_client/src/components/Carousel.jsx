@@ -17,7 +17,7 @@ export function SwipeableTextMobileStepper({ images }) {
   };
 
   return (
-    <Box sx={{ width: "80%", flexGrow: 1, mx: "auto" }}>
+    <Box sx={{ width: "100%", flexGrow: 1, mx: "auto" }}>
       { }
 
       <AutoPlaySwipeableViews
@@ -32,9 +32,10 @@ export function SwipeableTextMobileStepper({ images }) {
               <Box
                 component="div"
                 sx={{
-                  position: "relative",
+                  position: "auto",
                   overflow: "hidden",
-                  width: "100%",
+                  width: "60%",
+                  margin: "auto",
                 }}
               >
                 <img

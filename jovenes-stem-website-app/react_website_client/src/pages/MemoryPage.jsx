@@ -1,30 +1,35 @@
 import * as React from "react";
 import { Typography } from "@mui/material";
 import { ControlledAccordions } from "../components/DropDown";
-import { SwipeableTextMobileStepper } from "../components/Carousel";
-import Box from "@mui/material/Box";
+
 
 const containerStyle = {
   display: 'flex',
   alignItems: 'center',
-  marginBottom: '50px',
+  marginTop: '50px',
+  margin: '30px',
 };
 
 const DropDownStyle = {
-  display: 'block',
+  display: 'flex',
+  justifyContent: 'center',
   alignItems: 'center',
-  margin: '50px',
+  marginLeft: '320px',
+  marginRight: '100px',
+  marginTop: '10px',
 };
 
 export function MemoryPage() {
   return (
 
-    <div style={DropDownStyle} >
+    <div>
       <div style={containerStyle}>
         <Typography variant="h2" color={"#1c21d1"}>|</Typography>
         <Typography variant="h3">  Memorias</Typography>
       </div>
-      <ControlledAccordions /> { }
+      <div style={DropDownStyle} >
+        <ControlledAccordions /> { }
+      </div>
     </div>
   );
 }
