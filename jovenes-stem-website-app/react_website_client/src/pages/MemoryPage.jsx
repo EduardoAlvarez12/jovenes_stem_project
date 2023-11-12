@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Typography } from "@mui/material";
+import { Accordion, Typography } from "@mui/material";
 import { ControlledAccordions } from "../components/DropDown";
+import { SwipeableTextMobileStepper } from "../components/Carousel";
 
 
 const containerStyle = {
@@ -12,11 +13,10 @@ const containerStyle = {
 
 const DropDownStyle = {
   display: 'flex',
+  margin: 'auto',
   justifyContent: 'center',
   alignItems: 'center',
-  marginLeft: '320px',
-  marginRight: '100px',
-  marginTop: '10px',
+  width: '90%',
 };
 
 export function MemoryPage() {

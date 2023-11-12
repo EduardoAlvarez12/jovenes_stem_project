@@ -11,7 +11,7 @@ export default function StandardImageList() {
 
     <Container  maxWidth="m" style={{ marginTop: '7%' }}>
         <Box sx={{ p: 1, borderLeft: 4, borderColor:'#1c21d1'}}>
-        <Typography variant="h2" sx={{fontWeight: 'bold'}}  marginLeft={4}>¿Que Hacemos? </Typography> 
+        <Typography variant="h2" sx={{fontWeight: 'bold'}}  marginLeft={4}>¿Qué Hacemos? </Typography> 
         </Box> 
         <Grid sx={{ p: 6, }} container 
         spacing={10} 
@@ -30,7 +30,7 @@ export default function StandardImageList() {
         <CardContent>
           <Typography variant="body2">
            Impartimos clases teóricas y prácticas con instructores 
-           capacitados con conocimiento, mejorando tu aprendizaje.
+           capacitados, mejorando tu aprendizaje.
 
           </Typography>
         </CardContent>
@@ -50,9 +50,9 @@ export default function StandardImageList() {
         />
         <CardContent>
           <Typography variant="body2">
-              Realizamos visitas técnicas a empresas de desarrollo,
-              con el fin de que los jóvenes tengan interés en el
-              área de Ingeniería y Tecnología.
+              Realizamos visitas técnicas a empresas STEM
+              con el fin de sembrar en los jóvenes el interés en
+              las áreas de Ingeniería y Tecnología.
 
           </Typography>
         </CardContent>
@@ -72,8 +72,8 @@ export default function StandardImageList() {
         />
         <CardContent>
           <Typography variant="body2">
-           La conviencia y apoyo en vital en nuestro grupo, 
-           realizamos actividades recreativas para todos los gusto.
+           La conviencia y apoyo es vital en nuestro equipo, 
+           realizamos actividades recreativas.
 
           </Typography>
         </CardContent>
@@ -93,7 +93,7 @@ export default function StandardImageList() {
         <CardContent>
           <Typography variant="body2" >
            Brindamos asistencia presencial y virtual para 
-           todos nuestro alumnos con mucha dedicación y solventar dudas.
+           todos nuestros participantes por igual.
 
           </Typography>
         </CardContent>

@@ -26,13 +26,13 @@ export function ControlledAccordions() {
     };
 
     return (
-        <Box sx={{ width: '100%', margin: 'center' }}>
+        <Box sx={{ width: '100%'}}>
             {groupedData.map(({ year, images }, index) => (
                 <Accordion
                     key={index}
                     expanded={expanded === `panel${index + 1}`}
                     onChange={handleChange(`panel${index + 1}`)}
-                    style={{ width: '80%' }}
+                    style={{ width: '80%', margin: 'auto', }}
                 >
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}

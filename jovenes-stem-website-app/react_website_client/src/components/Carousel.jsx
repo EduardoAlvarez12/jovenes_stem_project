@@ -30,7 +30,7 @@ export function SwipeableTextMobileStepper({ images }) {
   };
 
   return (
-    <Box sx={{ width: "50%", flexGrow: 1, mx: "auto" }}>
+    <Box sx={{ width: "60%", flexGrow: 1, mx: "auto" }}>
      
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
