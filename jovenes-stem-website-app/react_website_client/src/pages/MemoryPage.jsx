@@ -25,7 +25,7 @@ export function MemoryPage() {
     <div>
       <div style={containerStyle}>
         <Typography variant="h2" color={"#1c21d1"}>|</Typography>
-        <Typography variant="h3">  Memorias</Typography>
+        <Typography id="title-SB">  Memorias</Typography>
       </div>
       <div style={DropDownStyle} >
         <ControlledAccordions /> { }
