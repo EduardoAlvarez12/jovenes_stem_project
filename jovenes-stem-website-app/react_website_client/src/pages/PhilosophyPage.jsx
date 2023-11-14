@@ -11,7 +11,7 @@ nota para mi:
 
 cosas que hay que hacer:
 
--[ ] Hacer un campo donde se vea la mision
+-[X] Hacer un campo donde se vea la mision
 -[ ] Hacer un campo donde se vea la vision
 -[ ] Hacer un campo donde se vea los valores
 -[ ] Hacer el formato
@@ -28,7 +28,20 @@ export function PhilosophyPage() {
 
       <h1>Prueba de reat inicio de la branch filosofia</h1>    
 
-
+      {/* Seccion de mision */}
+      <div>
+        <div className="texto">
+        <Typography variant="h2">mision</Typography>
+        <Typography variant="body2">
+          Somos una universidad que se adapta a los cambios e 
+          innova constantemente para responder a las necesidades 
+          actuales y futuras de la sociedad, mediante la docencia, 
+          investigación y proyección social.
+         </Typography>
+         </div>
+         <img className= "imagen" src="https://drive.google.com/uc?export=view&id=1-qfjmKSkQsB4V6P9Qx4FIJwMbaZwJNaL" alt="Mision U" />
+      </div>
+      
     </div>
 
   );
