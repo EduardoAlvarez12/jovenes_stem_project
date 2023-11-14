@@ -116,8 +116,30 @@ body {
     border-radius: 50%;
   }
 
-
   .MyTitle{
     color: #1c21d1;
   }
+}
+
+#tittle-history {
+  font-size: 80px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+  border-radius: 0.5%;
+  font-family: Poppins;
+  text-align: center;
+  border-left: 10px solid #1c21d1;
+}
+
+#paragraph-history {
+  font-size: 20px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2%;
+  margin-top: 4%;
+  font-family: Poppins;
+  text-align: center;
 }
