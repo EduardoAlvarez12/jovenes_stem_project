@@ -39,10 +39,31 @@ export function PhilosophyPage() {
           investigación y proyección social.
          </Typography>
          </div>
-         <img className= "imagen" src="https://drive.google.com/uc?export=view&id=1-qfjmKSkQsB4V6P9Qx4FIJwMbaZwJNaL" alt="Mision U" />
+         <img 
+          className= "imagen" 
+          src="https://drive.google.com/uc?export=view&id=10gBo81mYzLSblWwnaZ90tOQSBoYeZ8qz"
+          alt="Mision de la U" />
       </div>
       
+
+      {/* Seccion de vision */}
+      <div>
+        <div className="texto">
+        <Typography variant="h2">vision</Typography>
+        <Typography variant="body2">
+        Ser una universidad referente comprometida 
+        con los sectores de la sociedad a través de 
+        sus aportes académicos y la consolidación de 
+        las relaciones con sus socios.
+         </Typography>
+         </div>
+         <img 
+          className= "imagen" 
+          src="https://drive.google.com/uc?export=view&id=1-qfjmKSkQsB4V6P9Qx4FIJwMbaZwJNaL" 
+          alt="valores de la U" />
+      </div>
     </div>
 
+    
   );
 }
