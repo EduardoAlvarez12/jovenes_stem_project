@@ -6,24 +6,32 @@ import { SwipeableTextMobileStepper } from "../components/Carousel";
 
 const images = [
   {
-    title: "San Francisco – Oakland Bay Bridge, United States",
     cloud_image_url:
-      "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
+      "https://drive.google.com/uc?export=view&id=1dgYvDQDVNXclU_IbV9Uh7Dhl0D_lgFLs",
   },
   {
-    title: "Bird",
     cloud_image_url:
-      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
+      "https://drive.google.com/uc?export=view&id=1bJx9W3s67PA2Gh8SRFXhrioYS5ZsZ02i",
   },
   {
-    title: "Bali, Indonesia",
     cloud_image_url:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250",
+      "https://drive.google.com/uc?export=view&id=1x2Un4ojzWWfqMvuZQZVrC7iXpxn4HkZv",
   },
   {
-    title: "Goč, Serbia",
     cloud_image_url:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
+      "https://drive.google.com/uc?export=view&id=1eIYdGZycMg-bqxXcALr98oVr7yfSDfmG",
+  },
+  {
+    cloud_image_url:
+      "https://drive.google.com/uc?export=view&id=1v9fMIq2YJIAGNyVdlQ-dANaP7mqhwJMX",
+  },
+  {
+    cloud_image_url:
+      "https://drive.google.com/uc?export=view&id=1GWV-xtq3Ao2OFNr9Epi1XjmrItkYHR8R",
+  },
+  {
+    cloud_image_url:
+      "https://drive.google.com/uc?export=view&id=1yiUHe59N9eLPNcETyaNiRnwFazoigjZX",
   },
 ];
 
@@ -40,7 +48,12 @@ export function HistoryPage() {
       >
         <SwipeableTextMobileStepper images={images} />
       </Box>
-      <Typography variant="h1">Nuestra Historia</Typography>
+      <Typography id="tittle-history">Nuestra Historia</Typography>
+      <div id="paragraph-history">
+        <p>Technogirl nació en el año lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+        
+        <p>Desde un principio nuestro objetivo ha sido lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+      </div>
     </div>
   );
 }
