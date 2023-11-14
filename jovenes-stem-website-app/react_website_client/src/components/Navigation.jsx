@@ -46,7 +46,7 @@ export function Navigation() {
     <AppBar
       position="static"
       sx={{ minHeight: "110px", backgroundColor: "#ffffff" }}
-      //elevation={0}
+    //elevation={0}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -97,12 +97,16 @@ export function Navigation() {
           {/* Menu de Hamburguesa para moviles termina */}
 
           {/* Logo UGB */}
-          <Box
-            component="img"
-            src={ugbLogo}
-            alt="Logo UGB"
-            sx={{ maxHeight: "110px", ml: 20 }} // Adjust the maxHeight value as needed
-          />
+          <Box>
+            <Link to="/home">
+              <Box
+                component="img"
+                src={ugbLogo}
+                alt="Logo UGB"
+                sx={{ maxHeight: "110px", ml: 20 }} // Adjust the maxHeight value as needed
+              />
+            </Link>
+          </Box>
 
           {/* Navbar de Escritorio comienza */}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>

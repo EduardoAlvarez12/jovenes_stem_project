@@ -31,20 +31,7 @@ export function SwipeableTextMobileStepper({ images }) {
 
   return (
     <Box sx={{ width: "60%", flexGrow: 1, mx: "auto" }}>
-      {/* <Paper
-        square
-        elevation={0}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          height: 50,
-          pl: 2,
-          bgcolor: "background.default",
-        }}
-      >
-        <Typography>{images[activeStep].title}</Typography>
-      </Paper> */}
-
+     
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
@@ -90,36 +77,6 @@ export function SwipeableTextMobileStepper({ images }) {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-
-      {/* <MobileStepper
-        steps={maxSteps}
-        position="static"
-        activeStep={activeStep}
-        nextButton={
-          <Button
-            size="small"
-            onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
-          >
-            Next
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowLeft />
-            ) : (
-              <KeyboardArrowRight />
-            )}
-          </Button>
-        }
-        backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowRight />
-            ) : (
-              <KeyboardArrowLeft />
-            )}
-            Back
-          </Button>
-        }
-      /> */}
     </Box>
   );
 }
