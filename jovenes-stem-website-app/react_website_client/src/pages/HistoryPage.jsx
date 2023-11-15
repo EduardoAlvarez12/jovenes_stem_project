@@ -74,18 +74,17 @@ export function HistoryPage() {
                 ) : (
                   data[year].images.map((image, index) => (
                     <img
+                      className="history-image"
                       key={index}
                       src={image}
                       alt={`Image ${index + 1}`}
-                      className="history-image"
                     />
                   ))
                 )}
               </div>
 
               <div className="paragraphs-container">
-                <p className="history-paragraph">{data[year].paragraphs1}</p>
-                <p className="history-paragraph">{data[year].paragraphs2}</p>
+                <p className="history-paragraph" style={{ whiteSpace: "pre-wrap"}}>{data[year].text}</p>
               </div>
             </div>
 
