@@ -13,7 +13,16 @@ class ImageView(viewsets.ModelViewSet):
 
 class TextContentView(viewsets.ModelViewSet):
     serializer_class = TextContentSerializer
-    queryset = TextContent.objects.all()
+    def get_queryset(self):
+        """
+        Optionally restricts the returned text content to a given section,
+        by filtering against a `section` query parameter in the URL.
+        """
+        queryset = TextContent.objects.all()
+        section_name = self.request.query_params.get('section')
+        if section_name is not None:
+            queryset = queryset.filter(section__name=section_name)
+        return queryset
 
 class TextContentImageView(viewsets.ModelViewSet):
     serializer_class = TextContentImageSerializer
