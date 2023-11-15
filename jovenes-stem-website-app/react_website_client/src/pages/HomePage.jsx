@@ -2,7 +2,7 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { SwipeableTextMobileStepper } from "../components/Carousel";
-import {  Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import StandardImageList from '../components/Card'
 import { Testimonials } from "../components/Testimonials";
 
@@ -10,8 +10,8 @@ const images = [
   {
     title: "Tecno Girls – Incripcion del año 2023",
     cloud_image_url:
-      
-     "https://drive.google.com/uc?export=view&id=1s6VP8a6SRX1x-9bUtKYS-zBPXFxyp9gA&rl"  ,
+
+      "https://drive.google.com/uc?export=view&id=1s6VP8a6SRX1x-9bUtKYS-zBPXFxyp9gA&rl",
   },
   {
     title: "Chicas Tecnológicas",
@@ -51,7 +51,7 @@ const testimonialImages = [
   {
     title: "Theo Sorel",
     description: "I enjoy catching up with Fetch on my laptop, or on my phone when I'm on the go!",
-    cloud_image_url:"https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-No-Background.png",
+    cloud_image_url: "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-No-Background.png",
   },
 ];
 
@@ -59,19 +59,20 @@ const testimonialImages = [
 export function HomePage() {
   return (
     <div>
-      <Typography variant="h1" align="center" color="#1c21d1" sx={{fontWeight: 'bold', m:1, fontSize: 55}} paddingTop={2} > Jóvenes en STEM</Typography>
+      <Typography variant="h1" align="center" color="#1c21d1" sx={{ fontWeight: 'bold', m: 1, fontSize: 55 }} paddingTop={2} > Jóvenes en STEM</Typography>
       <div>
-      <Box
-        sx={{
-          background:
-            "linear-gradient(to right, white 0%, #5458ca 30%, #575cfc 70%, white 100%)",
-          boxShadow:
-            "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
-        }}>
-        <SwipeableTextMobileStepper images={images} />
-      </Box>
+        <Box
+          sx={{
+            background:
+              "linear-gradient(to right, white 0%, #5458ca 30%, #575cfc 70%, white 100%)",
+            boxShadow:
+              "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
+          }}>
+          <SwipeableTextMobileStepper images={images} />
+        </Box>
       </div>
-      <StandardImageList/>
+      <StandardImageList />
+      <Typography id="title-history">Casos de Éxito</Typography>
       <Testimonials testimonialImages={testimonialImages} />
     </div>
   );

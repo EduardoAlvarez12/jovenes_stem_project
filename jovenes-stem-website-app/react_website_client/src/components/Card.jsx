@@ -11,7 +11,7 @@ export default function StandardImageList() {
 
     <Container  maxWidth="m" style={{ marginTop: '7%' }}>
         <Box sx={{ p: 1, borderLeft: 4, borderColor:'#1c21d1'}}>
-        <Typography variant="h2" sx={{fontWeight: 'bold'}}  marginLeft={4}>¿Qué Hacemos? </Typography> 
+        <Typography id="title-SB"  marginLeft={4}>¿Qué Hacemos? </Typography> 
         </Box> 
         <Grid sx={{ p: 6, }} container 
         spacing={10} 
