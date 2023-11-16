@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Section, Content
+from .models import Section, Image, TextContent, TextContentImage
 
 # Register your models here.
-apiModels = [Content, Section]
+apiModels = [Image, Section, TextContent, TextContentImage]
 
 admin.site.register(apiModels)
