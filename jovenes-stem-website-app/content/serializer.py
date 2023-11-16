@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Section, Image, TextContent, TextContentImage
+from itertools import groupby
 
 class SectionSerializer(serializers.ModelSerializer):
     class Meta:
@@ -25,3 +26,12 @@ class TextContentSerializer(serializers.ModelSerializer):
     def get_images(self, obj):
         images = Image.objects.filter(textcontentimage__text_content=obj)
         return ImageSerializer(images, many=True).data
+
+class YearGroupedImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Image
+        fields = '__all__'
+
+
+
+

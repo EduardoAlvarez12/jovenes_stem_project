@@ -18,7 +18,7 @@ class Image(models.Model):
     upload_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.title
+        return self.title + " (" + str(self.year) + ")"
     
 class TextContent(models.Model):
     title = models.CharField(max_length=255)
@@ -27,11 +27,11 @@ class TextContent(models.Model):
     section = models.ForeignKey(Section, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.title
+        return self.title + " (" + str(self.year) + ")"
 
 class TextContentImage(models.Model):
     text_content = models.ForeignKey(TextContent, on_delete=models.CASCADE)
     image = models.ForeignKey(Image, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.text_content.title + " - " + self.image.title
+        return "Texto: " + self.text_content.title + " (" + str(self.text_content.year) + ")" + " | " + "Imagen: " +  self.image.title + " (" + str(self.image.year) + ")"

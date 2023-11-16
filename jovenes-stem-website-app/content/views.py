@@ -1,12 +1,14 @@
 from rest_framework import viewsets
-from .serializer import SectionSerializer, ImageSerializer, TextContentSerializer, TextContentImageSerializer
+from rest_framework.response import Response
+from collections import defaultdict
+from .serializer import SectionSerializer, ImageSerializer, TextContentSerializer, TextContentImageSerializer, YearGroupedImageSerializer
 from .models import Section, Image, TextContent, TextContentImage
 
-class SectionView(viewsets.ModelViewSet):
+class SectionView(viewsets.ReadOnlyModelViewSet):
     serializer_class = SectionSerializer
     queryset = Section.objects.all()
 
-class ImageView(viewsets.ModelViewSet):
+class ImageView(viewsets.ReadOnlyModelViewSet):
     serializer_class = ImageSerializer
     def get_queryset(self):
         """
@@ -19,7 +21,7 @@ class ImageView(viewsets.ModelViewSet):
             queryset = queryset.filter(section__name=section_name)
         return queryset    
 
-class TextContentView(viewsets.ModelViewSet):
+class TextContentView(viewsets.ReadOnlyModelViewSet):
     serializer_class = TextContentSerializer
     def get_queryset(self):
         """
@@ -32,6 +34,23 @@ class TextContentView(viewsets.ModelViewSet):
             queryset = queryset.filter(section__name=section_name)
         return queryset
 
-class TextContentImageView(viewsets.ModelViewSet):
+class TextContentImageView(viewsets.ReadOnlyModelViewSet):
     serializer_class = TextContentImageSerializer
     queryset = TextContentImage.objects.all()
+
+class YearGroupedImageViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Image.objects.all()
+    serializer_class = YearGroupedImageSerializer
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset, many=True)
+        data = serializer.data
+
+        grouped_images = defaultdict(list)
+        for image in data:
+            grouped_images[image['year']].append(image)
+
+        grouped_data = [{'year': year, 'images': images} for year, images in grouped_images.items()]
+
+        return Response(grouped_data)
