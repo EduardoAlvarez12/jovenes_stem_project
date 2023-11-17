@@ -6,6 +6,7 @@ import { HistoryPage } from "./pages/HistoryPage";
 import { MemoryPage } from "./pages/MemoryPage";
 import { Navigation } from "./components/Navigation";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Footer } from "./components/Footer";
 
 
 

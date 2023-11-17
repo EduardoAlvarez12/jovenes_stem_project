@@ -1,6 +1,7 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import { Typography } from "@mui/material";
+import { Footer } from "../components/Footer";
 
 /* nota para mi los comentarios son raros de react:
 
@@ -20,17 +21,36 @@ cosas que hay que hacer:
 P.D me gusta ponerme notas para mi para no olvidarme 
 */
 
+const contenedor_style ={
+  display: 'flex',
+  width:  '100%',
+  borde: '2px solid red',
+};
+const imagen_style = {
+  
+  with: '50%',
+  paddin: '5px',
+}
 export function PhilosophyPage() {
   return (
     <div>
+    
+    </div>
+
+    
+  );
+  
+}
+/*
+<div>
       <Typography variant="h1">Filosofía Institucional</Typography>
       
 
       <h1>Prueba de reat inicio de la branch filosofia</h1>    
 
-      {/* Seccion de mision */}
-      <div>
-        <div className="texto">
+      {
+      <div style={contenedor_style}>
+        <div class=" columna">
         <Typography variant="h2">mision</Typography>
         <Typography variant="body2">
           Somos una universidad que se adapta a los cambios e 
@@ -40,13 +60,14 @@ export function PhilosophyPage() {
          </Typography>
          </div>
          <img 
-          className= "imagen" 
+          style={imagen_style}
+          class= "imagen" 
+          height = '170px'
           src="https://drive.google.com/uc?export=view&id=10gBo81mYzLSblWwnaZ90tOQSBoYeZ8qz"
           alt="Mision de la U" />
       </div>
       
 
-      {/* Seccion de vision */}
       <div>
         <div className="texto">
         <Typography variant="h2">vision</Typography>
@@ -59,11 +80,12 @@ export function PhilosophyPage() {
          </div>
          <img 
           className= "imagen" 
+          height = '170px'
           src="https://drive.google.com/uc?export=view&id=1-qfjmKSkQsB4V6P9Qx4FIJwMbaZwJNaL" 
           alt="valores de la U" />
       </div>
 
-      {/* Seccion de valores */}
+     
       <div>
         <div className="texto">
         <Typography variant="h2">valores</Typography>
@@ -98,8 +120,4 @@ export function PhilosophyPage() {
          </div>
       </div>
 
-    </div>
-
-    
-  );
-}
+  */
