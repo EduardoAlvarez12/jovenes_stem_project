@@ -1,0 +1,41 @@
+:root{
+    --texto-size:100%;
+    --image-size:30%;
+    --color-fondo:#1c21d1;
+}
+
+
+.contenedor {
+    background: var(--color-fondo);
+    color: white;
+    display: flex;
+   align-items: center;
+    margin: 10px;
+    margin-top: 30px;
+
+    
+}
+.contenedor div {
+    width: var(--texto-size);
+    text-align: center;
+    margin: 20px;
+}
+
+.imagen{
+    width: var(--image-size);
+    height: auto;
+}
+
+
+
+.titulo {
+    margin-top: 25px;
+    background: var(--color-fondo);
+    padding-top: 10px;
+    padding-top: 10px;
+    
+    color: white;
+}
+.grid{
+    padding: 20px;
+}
