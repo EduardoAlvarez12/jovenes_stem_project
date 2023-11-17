@@ -72,7 +72,6 @@ export function HomePage() {
         </Box>
       </div>
       <StandardImageList />
-      <Typography id="title-history">Casos de Éxito</Typography>
       <Testimonials testimonialImages={testimonialImages} />
     </div>
   );
