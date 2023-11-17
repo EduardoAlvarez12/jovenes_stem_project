@@ -103,6 +103,10 @@ export default function StandardImageList() {
           </Grid>
           
         </Grid>
+
+        <Box sx={{ p: 1, borderLeft: 4, borderColor:'#1c21d1'}}>
+        <Typography id="title-SB"  marginLeft={4}>Casos de Éxito</Typography> 
+        </Box>
  
       </Container>
 
