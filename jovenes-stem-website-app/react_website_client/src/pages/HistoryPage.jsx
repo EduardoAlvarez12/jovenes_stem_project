@@ -68,7 +68,7 @@ export function HistoryPage() {
                 {data[year].images.length > 1 ? (
                   <div className="history-image-list">
                     {data[year].images.map((image, index) => (
-                      <img className="history-image" key={index} src={image} alt={`Image ${index + 1}`} />
+                      <img className="history-image" key={index} src={image.cloud_image_url} alt={`Image ${index + 1}`} />
                     ))}
                   </div>
                 ) : (
@@ -76,7 +76,7 @@ export function HistoryPage() {
                     <img
                       className="history-image"
                       key={index}
-                      src={image}
+                      src={image.cloud_image_url}
                       alt={`Image ${index + 1}`}
                     />
                   ))
