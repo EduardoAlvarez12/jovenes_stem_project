@@ -1,112 +1,69 @@
 import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import Button from '@mui/material/Button';
-import { Container, Typography,Card,CardContent,CardMedia,Box,Grid, CardActionArea } from "@mui/material";
+import { useEffect, useState } from 'react';
+import {getHomeContent} from '../api/home.api'
+import { Container, Typography,Box,Grid,Paper} from "@mui/material";
+import Masonry from '@mui/lab/Masonry';
+import { styled } from '@mui/material/styles';
 
+const Label = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(0.5),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+  borderBottomLeftRadius: 0,
+  borderBottomRightRadius: 0,
+}));
 
+const ImageMasonry = () => {
+  const [QueHacemos, setQueHacemosData] = useState([]);
 
-export default function StandardImageList() {
-  return (
-
+  useEffect(() => {
+    async function loadHistory() {
+      const res = await getHomeContent();
+      setQueHacemosData(res.data)
+    }
+    loadHistory();
+  })
+  return <div>
     <Container  maxWidth="m" style={{ marginTop: '7%' }}>
         <Box sx={{ p: 1, borderLeft: 4, borderColor:'#1c21d1'}}>
-        <Typography id="title-SB"  marginLeft={4}>¿Qué Hacemos? </Typography> 
+        <Typography variant="h2" sx={{fontWeight: 'bold'}}  marginLeft={4}>¿Que Hacemos? </Typography> 
         </Box> 
         <Grid sx={{ p: 6, }} container 
-        spacing={10} 
+      
         direction="row"
         justifyContent="center"
         alignItems="center">
-          <Grid item>
-      <Card sx={{ maxWidth: 400 }} >
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="170"
-          src='https://drive.google.com/uc?export=view&id=1-gzE5ZH_UnwIZahr_jvFaeY36nQWNv5G&rl' 
-          alt="Clases Tecnologia"
-        />
-        <CardContent>
-          <Typography variant="body2">
-           Impartimos clases teóricas y prácticas con instructores 
-           capacitados, mejorando tu aprendizaje.
 
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-          
-          </Grid>
-          
-          <Grid item>
-      <Card sx={{ maxWidth: 400 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="170"
-          src='https://drive.google.com/uc?export=view&id=1YdgylRhy-J4b3VfMSMWqswIVJGwDqqMz&rl' 
-          alt="visita tecnica"
-        />
-        <CardContent>
-          <Typography variant="body2">
-              Realizamos visitas técnicas a empresas STEM
-              con el fin de sembrar en los jóvenes el interés en
-              las áreas de Ingeniería y Tecnología.
+       <div  style={{ marginTop: '7%' }}> 
+       <Box sx={{ width: 900, minHeight: 829 }}>
+      <Masonry columns={3} spacing={2}>
+        {QueHacemos.map((QueHacemosD) => (
+          <div key={QueHacemosD.id}>
+            <Label>{QueHacemosD.description}</Label>
+            <img
+              src={QueHacemosD.cloud_image_url}
+              loading="lazy"
+              style={{
+                borderBottomLeftRadius: 4,
+                borderBottomRightRadius: 4,
+                display: 'block',
+                width: '100%',
+              }}
+            />
+          </div>
+        ))}
+      </Masonry>
+    </Box>
+       </div>
+   
+    </Grid>
+    </Container>
 
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-
-          </Grid>
-
-          <Grid item>
-      <Card sx={{ maxWidth: 400 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="200"
-          src='https://drive.google.com/uc?export=view&id=1eyff9zvw8qe4ZaBseYn8ubyBhp7MdtjF&rl' 
-          alt="actividad recreativa"
-        />
-        <CardContent>
-          <Typography variant="body2">
-           La conviencia y apoyo es vital en nuestro equipo, 
-           realizamos actividades recreativas.
-
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-          
-          </Grid>
-          <Grid item>
-      <Card sx={{ maxWidth: 400 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="200"
-          src='https://drive.google.com/uc?export=view&id=1Cc4Yj2mHS4nbKJc8aY8YlYkdc8IAYnka&rl' 
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography variant="body2" >
-           Brindamos asistencia presencial y virtual para 
-           todos nuestros participantes por igual.
-
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-          
-          </Grid>
-          
-        </Grid>
- 
-      </Container>
-
-
+  </div>
     
-  );
+
 }
+
+export default ImageMasonry;

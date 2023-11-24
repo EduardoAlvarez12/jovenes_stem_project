@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { SwipeableTextMobileStepper } from "../components/Carousel";
 import { Typography } from "@mui/material";
-import StandardImageList from '../components/Card'
+import ImageMasonry from '../components/Card'
 import { Testimonials } from "../components/Testimonials";
 
 const images = [
@@ -71,7 +71,7 @@ export function HomePage() {
           <SwipeableTextMobileStepper images={images} />
         </Box>
       </div>
-      <StandardImageList />
+      <ImageMasonry />
       <Typography id="title-history">Casos de Éxito</Typography>
       <Testimonials testimonialImages={testimonialImages} />
     </div>
