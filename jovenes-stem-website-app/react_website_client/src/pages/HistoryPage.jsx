@@ -1,5 +1,4 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import { SwipeableTextMobileStepper } from "../components/Carousel";
@@ -11,15 +10,16 @@ export function HistoryPage() {
 
   return (
     <div>
+  <div className="image-list-container" align="center">
       <Box
         sx={{
           background:
-            "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
+            "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100% )",
           boxShadow:
             "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
         }}
       >
-        <SwipeableTextMobileStepper images={images} />
+        <SwipeableTextMobileStepper images={images } />
       </Box>
       <Typography id="title-history">Nuestra Historia</Typography>
       <div id="paragraph-history">
@@ -49,6 +49,7 @@ export function HistoryPage() {
                       key={index}
                       src={image.cloud_image_url}
                       alt={`Image ${index + 1}`}
+
                     />
                   ))
                 )}
@@ -63,6 +64,6 @@ export function HistoryPage() {
         ))}
       </div>
     </div>
-
+    </div>
   );
 }
