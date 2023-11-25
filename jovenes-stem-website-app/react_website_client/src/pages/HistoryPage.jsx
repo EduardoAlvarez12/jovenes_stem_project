@@ -2,12 +2,53 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import { SwipeableTextMobileStepper } from "../components/Carousel";
-import { HistoryText, HistoryImages } from '../components/HistoryText';
+import HistoryText from '../components/HistoryText';
+
+const images = [
+  {
+    title: "TecnoGirls 2016",
+    cloud_image_url:
+    "https://i.imgur.com/G2tA5V6.jpg",
+  },
+  {
+    title: "TecnoGirls 2017",
+    cloud_image_url:
+      "https://i.imgur.com/hzki3Xm.png",
+  },
+  {
+    title: "TecnoGirls 2018",
+    cloud_image_url:
+      "https://i.imgur.com/DRAdiYh.png",
+  },
+  {
+    title: "TecnoGirls 2019",
+    cloud_image_url:
+      "https://i.imgur.com/chlDl7B.jpg",
+  },
+  {
+    title: "TecnoGirls 2020",
+    cloud_image_url:
+      "https://i.imgur.com/GCsuObX.jpg",
+  },
+  {
+    title: "TecnoGirls 2021",
+    cloud_image_url:
+      "https://i.imgur.com/d1Zq9qG.jpg",
+  },
+  {
+   title: "TecnoGirls 2022",
+    cloud_image_url:
+      "https://i.imgur.com/dZqR3QB.jpg", 
+  },
+  {
+    title: "TecnoGirls 2023",
+     cloud_image_url:
+       "https://i.imgur.com/uBOkUyG.jpg", 
+   },
+];
 
 export function HistoryPage() {
   const { years, data } = HistoryText();
-  const images = HistoryImages();
-
   return (
     <div>
   <div className="image-list-container" align="center">
