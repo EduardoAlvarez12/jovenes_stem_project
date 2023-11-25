@@ -1,3 +1,7 @@
+.image-list-container img {
+  max-width: 55%; 
+}
+
 body {
   background: white;
   color: black;
