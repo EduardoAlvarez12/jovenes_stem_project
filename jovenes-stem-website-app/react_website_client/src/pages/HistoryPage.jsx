@@ -3,41 +3,12 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import { SwipeableTextMobileStepper } from "../components/Carousel";
-import HistoryText from '../components/HistoryText';
-
-const images = [
-  {
-    cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1dgYvDQDVNXclU_IbV9Uh7Dhl0D_lgFLs",
-  },
-  {
-    cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1bJx9W3s67PA2Gh8SRFXhrioYS5ZsZ02i",
-  },
-  {
-    cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1x2Un4ojzWWfqMvuZQZVrC7iXpxn4HkZv",
-  },
-  {
-    cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1eIYdGZycMg-bqxXcALr98oVr7yfSDfmG",
-  },
-  {
-    cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1v9fMIq2YJIAGNyVdlQ-dANaP7mqhwJMX",
-  },
-  {
-    cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1GWV-xtq3Ao2OFNr9Epi1XjmrItkYHR8R",
-  },
-  {
-    cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1yiUHe59N9eLPNcETyaNiRnwFazoigjZX",
-  },
-];
+import { HistoryText, HistoryImages } from '../components/HistoryText';
 
 export function HistoryPage() {
   const { years, data } = HistoryText();
+  const images = HistoryImages();
+
   return (
     <div>
       <Box
