@@ -1,5 +1,4 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import { SwipeableTextMobileStepper } from "../components/Carousel";
@@ -7,48 +6,61 @@ import HistoryText from '../components/HistoryText';
 
 const images = [
   {
+    title: "TecnoGirls 2016",
     cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1dgYvDQDVNXclU_IbV9Uh7Dhl0D_lgFLs",
+    "https://i.imgur.com/G2tA5V6.jpg",
   },
   {
+    title: "TecnoGirls 2017",
     cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1bJx9W3s67PA2Gh8SRFXhrioYS5ZsZ02i",
+      "https://i.imgur.com/hzki3Xm.png",
   },
   {
+    title: "TecnoGirls 2018",
     cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1x2Un4ojzWWfqMvuZQZVrC7iXpxn4HkZv",
+      "https://i.imgur.com/DRAdiYh.png",
   },
   {
+    title: "TecnoGirls 2019",
     cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1eIYdGZycMg-bqxXcALr98oVr7yfSDfmG",
+      "https://i.imgur.com/chlDl7B.jpg",
   },
   {
+    title: "TecnoGirls 2020",
     cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1v9fMIq2YJIAGNyVdlQ-dANaP7mqhwJMX",
+      "https://i.imgur.com/GCsuObX.jpg",
   },
   {
+    title: "TecnoGirls 2021",
     cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1GWV-xtq3Ao2OFNr9Epi1XjmrItkYHR8R",
+      "https://i.imgur.com/d1Zq9qG.jpg",
   },
   {
+   title: "TecnoGirls 2022",
     cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1yiUHe59N9eLPNcETyaNiRnwFazoigjZX",
+      "https://i.imgur.com/dZqR3QB.jpg", 
   },
+  {
+    title: "TecnoGirls 2023",
+     cloud_image_url:
+       "https://i.imgur.com/uBOkUyG.jpg", 
+   },
 ];
 
 export function HistoryPage() {
   const { years, data } = HistoryText();
   return (
     <div>
+  <div className="image-list-container" align="center">
       <Box
         sx={{
           background:
-            "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
+            "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100% )",
           boxShadow:
             "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
         }}
       >
-        <SwipeableTextMobileStepper images={images} />
+        <SwipeableTextMobileStepper images={images } />
       </Box>
       <Typography id="title-history">Nuestra Historia</Typography>
       <div id="paragraph-history">
@@ -78,6 +90,7 @@ export function HistoryPage() {
                       key={index}
                       src={image.cloud_image_url}
                       alt={`Image ${index + 1}`}
+
                     />
                   ))
                 )}
@@ -92,6 +105,6 @@ export function HistoryPage() {
         ))}
       </div>
     </div>
-
+    </div>
   );
 }

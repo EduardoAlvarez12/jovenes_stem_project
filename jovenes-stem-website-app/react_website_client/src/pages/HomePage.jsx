@@ -8,30 +8,29 @@ import { Testimonials } from "../components/Testimonials";
 
 const images = [
   {
-    title: "Tecno Girls – Incripcion del año 2023",
+    title: "Tecno Girls – Inscripción del año 2023",
     cloud_image_url:
-
-      "https://drive.google.com/uc?export=view&id=1s6VP8a6SRX1x-9bUtKYS-zBPXFxyp9gA&rl",
+      "https://i.imgur.com/6ww0UPN.jpg",
   },
   {
     title: "Chicas Tecnológicas",
     cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1oo6szbDdMUYKmpkGxRey2C7M5-cavRk5&rl",
+      "https://i.imgur.com/zTOZo2K.jpg",
   },
   {
     title: "Grupo de Tecnologia",
     cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1TFifm4OK5bEtuiKnP1L3w8epUnCgj6K3&rl",
+      "https://i.imgur.com/mAPNkqw.jpg",
   },
   {
     title: "Área de Ingeniería- Principio de Diseño",
     cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1E4Ro3XmaqiWkwjJXN6dTCxtuym3erTtV&rl",
+      "https://i.imgur.com/9HfR0oa.jpg",
   },
   {
     title: "Despedida de los estudiantes ",
     cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1_SXnpv-BMZfyGo3X7ZKUO8Fke8MZ-G0q&rl",
+      "https://i.imgur.com/ppfQic1.jpg",
   },
 
 ];
@@ -61,8 +60,9 @@ export function HomePage() {
     <div>
       <Typography variant="h1" align="center" color="#1c21d1" sx={{ fontWeight: 'bold', m: 1, fontSize: 55 }} paddingTop={2} > Jóvenes en STEM</Typography>
       <div>
+      <div className="image-list-container" align="center">
         <Box
-          sx={{
+          sx={{ 
             background:
               "linear-gradient(to right, white 0%, #5458ca 30%, #575cfc 70%, white 100%)",
             boxShadow:
@@ -73,6 +73,7 @@ export function HomePage() {
       </div>
       <StandardImageList />
       <Testimonials testimonialImages={testimonialImages} />
+    </div>
     </div>
   );
 }

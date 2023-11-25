@@ -144,6 +144,11 @@ const año_2018 = [
     {
         title: "TecnoGirls 2018",
         cloud_image_url:
+            "https://i.imgur.com/f3qCyUT.png",
+    },
+    {
+        title: "TecnoGirls 2018",
+        cloud_image_url:
             "https://i.imgur.com/9qfnqCD.png",
     },
     {
@@ -284,34 +289,33 @@ const año_2023 = [
     {
         title: "TecnoGirls y Jóvenes en STEM 2023",
         cloud_image_url:
-            "https://i.imgur.com/giYp5u0.jpg",
+            "https://i.imgur.com/1YqKaIC.jpg",
     },
     {
         title: "TecnoGirls y Jóvenes en STEM 2023",
         cloud_image_url:
-            "https://i.imgur.com/NeV1ZMa.jpg",
-    },
-
-    {
-        title: "TecnoGirls y Jóvenes en STEM 2023",
-        cloud_image_url:
-            "https://i.imgur.com/1ylXjZR.jpg",
+            "https://i.imgur.com/j8rDpDe.jpg",
     },
     {
         title: "TecnoGirls y Jóvenes en STEM 2023",
         cloud_image_url:
-            "https://i.imgur.com/hyd4sXU.jpg?2",
+            "https://i.imgur.com/W9scTJt.jpg",
     },
-
     {
         title: "TecnoGirls y Jóvenes en STEM 2023",
         cloud_image_url:
-            "https://i.imgur.com/GDCtDFU.png",
+            "https://i.imgur.com/RLfJmtw.jpg",
     },
 
     {
         title: "TecnoGirls y Jóvenes en STEM 2023",
         cloud_image_url:
-            "https://i.imgur.com/8b1H103.png",
+            "https://i.imgur.com/sALoUnH.jpg",
+    },
+
+    {
+        title: "TecnoGirls y Jóvenes en STEM 2023",
+        cloud_image_url:
+            "https://i.imgur.com/H9geDLS.jpg",
     },
 ];
