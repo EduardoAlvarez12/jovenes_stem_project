@@ -14,11 +14,13 @@ Este repositorio aloja la API encargada de gestionar contenido y el frontend par
 2. npm install --force
 3. npm run dev
 
-## EJECUTAR EL BACKEND (opcional para el Sprint 1)
+## EJECUTAR EL BACKEND 
 1. colocarse en la carpeta /jovenes-stem-website-app
 2. pip install -r requirements.txt
-3. python manage.py runserver
-4. entrar a http://127.0.0.1:8000/content/api/
+3. python manage.py migrate
+4. python manage.py createsuperuser
+5. python manage.py runserver
+6. entrar a http://127.0.0.1:8000/content/api/
 
 ## REALIZAR UN PUSH
 1. colocarse en la carpeta y rama adecuada
