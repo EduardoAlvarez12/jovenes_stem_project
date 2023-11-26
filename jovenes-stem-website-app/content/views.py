@@ -28,7 +28,7 @@ class TextContentView(viewsets.ReadOnlyModelViewSet):
         Optionally restricts the returned text content to a given section,
         by filtering against a `section` query parameter in the URL.
         """
-        queryset = TextContent.objects.all()
+        queryset = TextContent.objects.all().order_by('-year')
         section_name = self.request.query_params.get('section')
         if section_name is not None:
             queryset = queryset.filter(section__name=section_name)

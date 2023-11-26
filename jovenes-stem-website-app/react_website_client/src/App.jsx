@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ContentApiPlaceholder } from "./pages/ContentApiPlaceholder";
 import { HomePage } from "./pages/HomePage";
-import { PhilosophyPage } from "./pages/PhilosophyPage";
 import { HistoryPage } from "./pages/HistoryPage";
 import { MemoryPage } from "./pages/MemoryPage";
 import { Navigation } from "./components/Navigation";
@@ -34,11 +32,9 @@ function App() {
     <BrowserRouter>
       <ThemeProvider theme={jov_stem_theme}>
         <Navigation />
-
           <Routes>
-          <Route path="/home" element={<HomePage />} />
-            <Route path="/content" element={<ContentApiPlaceholder />} />
-            <Route path="/filosofia" element={<PhilosophyPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/home" element={<HomePage />} />
             <Route path="/historia" element={<HistoryPage />} />
             <Route path="/memorias" element={<MemoryPage />} />
           </Routes>

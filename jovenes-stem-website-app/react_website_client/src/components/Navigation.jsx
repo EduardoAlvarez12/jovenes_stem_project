@@ -18,7 +18,6 @@ import ugbLogo from "../images/ugb_logo.jpg";
 
 const pages = [
   { name: "Inicio", url: "home" },
-  { name: "Filosofía", url: "filosofia" },
   { name: "Historia", url: "historia" },
   { name: "Memorias", url: "memorias" },
 ];
@@ -50,6 +49,19 @@ export function Navigation() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+
+          {/* Logo UGB Escritorio*/}
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
+            <Link to="/home">
+              <Box
+                component="img"
+                src={ugbLogo}
+                alt="Logo UGB"
+                sx={{ maxHeight: "110px", ml: 20 }} // Adjust the maxHeight value as needed
+              />
+            </Link>
+          </Box>
+
           {/* Menu de Hamburguesa para Moviles comienza */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -94,10 +106,8 @@ export function Navigation() {
               ))}
             </Menu>
           </Box>
-          {/* Menu de Hamburguesa para moviles termina */}
-
-          {/* Logo UGB */}
-          <Box>
+          {/* Logo UGB Móvil*/}
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
             <Link to="/home">
               <Box
                 component="img"
@@ -107,8 +117,11 @@ export function Navigation() {
               />
             </Link>
           </Box>
+          {/* Menu de Hamburguesa para moviles termina */}
 
-          {/* Navbar de Escritorio comienza */}
+          
+
+          {/* Navbar de Escritorio continúa */}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
@@ -132,7 +145,7 @@ export function Navigation() {
           {/* Navbar de Escritorio termina */}
 
           {/* Contenedor del Botón de Contacto inicia */}
-          <Box sx={{ flexGrow: 0, mx: 20 }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
               variant="contained"
               color="indigo"
