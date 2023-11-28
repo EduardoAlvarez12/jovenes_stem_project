@@ -10,7 +10,7 @@ export function Testimonials({ testimonialImages }) {
       showThumbs={false}
       showStatus={false}
       autoPlay={true}
-      interval={6100}
+      interval={7500}
     >      
         {testimonialImages.map((step, index) => (
           <div key={step.title}>
