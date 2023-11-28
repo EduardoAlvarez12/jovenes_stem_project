@@ -47,9 +47,9 @@ const HistoryImages = () => {
     };
   }, [])
 
-  const images = imagesData.map((item) => ({ cloud_image_url: item.cloud_image_url }));
+  
 
-  return images;
+  return imagesData;
 };
 
 export { HistoryText, HistoryImages };
