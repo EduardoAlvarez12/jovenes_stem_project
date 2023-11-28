@@ -113,7 +113,7 @@ export function Navigation() {
                 component="img"
                 src={ugbLogo}
                 alt="Logo UGB"
-                sx={{ maxHeight: "110px", ml: 20 }} // Adjust the maxHeight value as needed
+                sx={{ width:"75%", maxHeight: "110px", mr: 10}} // Adjust the maxHeight value as needed
               />
             </Link>
           </Box>

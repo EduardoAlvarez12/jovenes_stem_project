@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import { SwipeableTextMobileStepper } from "../components/Carousel";
-import { HistoryText, HistoryImages } from '../components/HistoryText';
+import { HistoryText, HistoryImages } from '../components/HistoryContent';
 
 export function HistoryPage() {
   const { years, data } = HistoryText();
