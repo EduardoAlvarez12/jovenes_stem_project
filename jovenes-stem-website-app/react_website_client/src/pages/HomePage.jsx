@@ -1,40 +1,13 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
 import { SwipeableTextMobileStepper } from "../components/Carousel";
+import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
-import StandardImageList from '../components/Card'
+import {ImageMasonry} from "../components/Card";
+import {CarouselImages} from "../components/HomeData";
 import { Testimonials } from "../components/Testimonials";
 
-const images = [
-  {
-    title: "Tecno Girls – Incripcion del año 2023",
-    cloud_image_url:
 
-      "https://drive.google.com/uc?export=view&id=1s6VP8a6SRX1x-9bUtKYS-zBPXFxyp9gA&rl",
-  },
-  {
-    title: "Chicas Tecnológicas",
-    cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1oo6szbDdMUYKmpkGxRey2C7M5-cavRk5&rl",
-  },
-  {
-    title: "Grupo de Tecnologia",
-    cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1TFifm4OK5bEtuiKnP1L3w8epUnCgj6K3&rl",
-  },
-  {
-    title: "Área de Ingeniería- Principio de Diseño",
-    cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1E4Ro3XmaqiWkwjJXN6dTCxtuym3erTtV&rl",
-  },
-  {
-    title: "Despedida de los estudiantes ",
-    cloud_image_url:
-      "https://drive.google.com/uc?export=view&id=1_SXnpv-BMZfyGo3X7ZKUO8Fke8MZ-G0q&rl",
-  },
-
-];
 
 const testimonialImages = [
   {
@@ -57,6 +30,9 @@ const testimonialImages = [
 
 
 export function HomePage() {
+
+  const images = CarouselImages();
+  
   return (
     <div>
       <Typography variant="h1" align="center" color="#1c21d1" sx={{ fontWeight: 'bold', m: 1, fontSize: 55 }} paddingTop={2} > Jóvenes en STEM</Typography>
@@ -71,7 +47,10 @@ export function HomePage() {
           <SwipeableTextMobileStepper images={images} />
         </Box>
       </div>
-      <StandardImageList />
+      <ImageMasonry />
+      <Box sx={{ p: 1, borderLeft: 4, borderColor:'#1c21d1'}}>
+        <Typography variant="h3"  style={{ fontWeight: '600' }} marginLeft={4}>Casos de Éxito</Typography> 
+        </Box> 
       <Testimonials testimonialImages={testimonialImages} />
     </div>
   );
