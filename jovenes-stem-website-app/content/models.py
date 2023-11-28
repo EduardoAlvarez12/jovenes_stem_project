@@ -18,7 +18,7 @@ class Image(models.Model):
     upload_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.title + " (" + str(self.year) + ")"
+        return "Imagen: " + self.title + " (" + str(self.year) + ")" + " | " + " Sección: " + self.section.name
     
 class TextContent(models.Model):
     title = models.CharField(max_length=255)

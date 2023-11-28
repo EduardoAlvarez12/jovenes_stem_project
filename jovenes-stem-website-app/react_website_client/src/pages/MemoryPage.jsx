@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Accordion, Typography } from "@mui/material";
-import { ControlledAccordions } from "../components/DropDown";
+import { ControlledAccordions } from "../components/MemoryContent";
 import { SwipeableTextMobileStepper } from "../components/Carousel";
 
 

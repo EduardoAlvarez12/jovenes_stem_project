@@ -3,8 +3,8 @@ import Button from "@mui/material/Button";
 import { SwipeableTextMobileStepper } from "../components/Carousel";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
-import {ImageMasonry} from "../components/Card";
-import {CarouselImages} from "../components/HomeData";
+import {ImageMasonry} from "../components/Masonry";
+import {CarouselImages} from "../components/HomeContent";
 import { Testimonials } from "../components/Testimonials";
 
 

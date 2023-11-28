@@ -44,6 +44,9 @@ class YearGroupedImageViewSet(viewsets.ReadOnlyModelViewSet):
 
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
+        section_name = self.request.query_params.get('section')
+        if section_name is not None:
+            queryset = queryset.filter(section__name=section_name)
         serializer = self.get_serializer(queryset, many=True)
         data = serializer.data
 

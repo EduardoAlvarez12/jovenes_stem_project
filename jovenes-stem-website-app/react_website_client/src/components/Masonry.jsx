@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import  {styled}  from '@mui/material/styles';
 import Box from "@mui/material/Box";
 import {Masonry} from '@mui/lab';
-import {HomeData} from '../components/HomeData'
+import {HomeData} from './HomeContent'
 
 const Label = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

@@ -6,8 +6,8 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Box from "@mui/material/Box";
-import { SwipeableTextMobileStepper } from "../components/Carousel";
-import { getMemoryContent } from "../api/memories.api";
+import { SwipeableTextMobileStepper } from "./Carousel";
+import { getMemoryContent } from "../api/memory.api";
 
 export function ControlledAccordions() {
 
