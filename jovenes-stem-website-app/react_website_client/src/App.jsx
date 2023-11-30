@@ -3,6 +3,7 @@ import { HomePage } from "./pages/HomePage";
 import { HistoryPage } from "./pages/HistoryPage";
 import { MemoryPage } from "./pages/MemoryPage";
 import { Navigation } from "./components/Navigation";
+import { Footer } from "./components/footer";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 
@@ -38,6 +39,7 @@ function App() {
             <Route path="/historia" element={<HistoryPage />} />
             <Route path="/memorias" element={<MemoryPage />} />
           </Routes>
+          <Footer />
       </ThemeProvider>
     </BrowserRouter>
 

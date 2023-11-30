@@ -8,12 +8,12 @@ const containerStyle = {
   display: 'flex',
   alignItems: 'center',
   marginTop: '50px',
-  margin: '30px',
+  margin: '50px',
 };
 
 const DropDownStyle = {
   display: 'flex',
-  margin: 'auto',
+  margin: '50px',
   justifyContent: 'center',
   alignItems: 'center',
   width: '90%',
