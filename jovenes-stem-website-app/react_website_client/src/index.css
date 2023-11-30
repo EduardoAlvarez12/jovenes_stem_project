@@ -15,7 +15,9 @@ body {
 
 .carousel .slide img {
   width: 139px !important;
+  height: 139px;
   border: 5px #01c0f9 solid;
+  object-fit: cover;
   border-radius: 50%;
 }
 

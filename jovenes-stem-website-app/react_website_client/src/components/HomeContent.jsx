@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getHomeContent } from '../api/home.api';
 import { getHomeCarouselContent } from '../api/home.api';
+import { getHomeTestimonialsContent } from '../api/home.api';
 
 //Que hacemos
 const HomeData = () => {
@@ -44,7 +45,27 @@ const HomeData = () => {
   return imagesData;
 };
 
+const testimonialsContent = () => {
+  const [testimonialsData, setTestimonialsData] = useState([]);
 
-export { HomeData, CarouselImages};
+  useEffect(() => {
+    const controller = new AbortController();
+    async function loadTestimonials() {
+      const res = await getHomeTestimonialsContent({ signal: controller.signal });
+      setTestimonialsData(res.data)
+    }
+    loadTestimonials();
+
+    return () => {
+      controller.abort();
+    };
+
+  }, [])
+
+  return testimonialsData;
+};
+
+
+export { HomeData, CarouselImages, testimonialsContent};
 
     
