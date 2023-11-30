@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
-export function Testimonials({ testimonialImages }) {
+export function Testimonials({ testimonialsData }) {
   return (
     <Carousel
       showArrows={false}
@@ -12,7 +12,7 @@ export function Testimonials({ testimonialImages }) {
       autoPlay={true}
       interval={7500}
     >      
-        {testimonialImages.map((step, index) => (
+        {testimonialsData.map((step, index) => (
           <div key={step.title}>
             <div>
               <img src={step.cloud_image_url} alt={step.title} />
