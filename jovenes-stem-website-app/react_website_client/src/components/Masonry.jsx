@@ -34,7 +34,7 @@ export function ImageMasonry() {
       >
         <div>
           <Box sx={{ width: "100%" }}>
-            <Masonry columns={2} spacing={1}>
+            <Masonry columns={3} spacing={2}>
               {data.map((datas) => (
                 <div key={datas.id}>
                   <Label>{datas.description}</Label>

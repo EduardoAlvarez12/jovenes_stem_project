@@ -67,7 +67,9 @@ export function HomePage() {
           </Typography>
         </Box>
       </Container>
-      <Testimonials testimonialsData={testimonialsData} />
+      <Container maxWidth="lg" style={{ marginBottom: "5%" }}>
+        <Testimonials testimonialsData={testimonialsData} />
+      </Container>
     </div>
   );
 }
