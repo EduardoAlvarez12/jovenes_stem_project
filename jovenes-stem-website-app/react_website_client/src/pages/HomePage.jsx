@@ -61,13 +61,15 @@ export function HomePage() {
       </div>
       <ImageMasonry />
       <Container maxWidth="m" style={{ marginTop: "7%" }}>
-      <Box sx={{ p: 1, borderLeft: 4, borderColor: "#1c21d1" }}>
-        <Typography variant="h3" style={{ fontWeight: "600" }} marginLeft={4}>
-          Casos de Éxito
-        </Typography>
-      </Box>
+        <Box sx={{ p: 1, borderLeft: 4, borderColor: "#1c21d1" }}>
+          <Typography variant="h3" style={{ fontWeight: "600" }} marginLeft={4}>
+            Casos de Éxito
+          </Typography>
+        </Box>
       </Container>
-      <Testimonials testimonialsData={testimonialsData} />
+      <Container maxWidth="lg" style={{ marginBottom: "5%" }}>
+        <Testimonials testimonialsData={testimonialsData} />
+      </Container>
     </div>
   );
 }

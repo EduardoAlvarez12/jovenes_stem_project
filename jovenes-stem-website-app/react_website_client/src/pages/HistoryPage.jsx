@@ -5,6 +5,7 @@ import { Typography } from "@mui/material";
 import { SwipeableTextMobileStepper } from "../components/Carousel";
 import { HistoryText, HistoryImages } from '../components/HistoryContent';
 
+
 export function HistoryPage() {
   const { years, data } = HistoryText();
   const images = HistoryImages();
@@ -55,14 +56,12 @@ export function HistoryPage() {
               </div>
 
               <div className="paragraphs-container">
-                <p className="history-paragraph" style={{ whiteSpace: "pre-wrap"}}>{data[year].text}</p>
+                <p className="history-paragraph" style={{ whiteSpace: "pre-wrap" }}>{data[year].text}</p>
               </div>
             </div>
-
           </div>
         ))}
       </div>
     </div>
-
   );
 }

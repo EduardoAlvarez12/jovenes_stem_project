@@ -39,7 +39,7 @@ export function SwipeableTextMobileStepper({ images }) {
         enableMouseEvents
       >
         {images.map((step, index) => (
-          <div key={step.title}>
+          <div key={step.id}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 component="div"
