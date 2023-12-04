@@ -15,7 +15,7 @@ export function HistoryPage() {
       <Box
         sx={{
           background:
-            "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
+          "linear-gradient(to right, #eaebff  0%, #131ae4 20%, #131ae4  80%, #eaebff   100%)",
           boxShadow:
             "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
         }}

@@ -19,21 +19,21 @@ const Label = styled(Paper)(({ theme }) => ({
 export function ImageMasonry() {
   const data = HomeData();
   return (
-    <Container maxWidth="m" style={{ marginTop: "7%" }}>
+    <Container maxWidth="m" style={{ marginTop: "5%" }}>
       <Box sx={{ p: 1, borderLeft: 4, borderColor: "#1c21d1" }}>
         <Typography variant="h3" sx={{ fontWeight: "bold" }} marginLeft={4}>
           ¿Qué Hacemos?{" "}
         </Typography>
       </Box>
       <Grid
-        sx={{ p: 6 }}
+        sx={{ p: 3}}
         container
         direction="row"
         justifyContent="center"
         alignItems="center"
       >
         <div>
-          <Box sx={{ width: "100%" }}>
+          <Box>
             <Masonry columns={3} spacing={2}>
               {data.map((datas) => (
                 <div key={datas.id}>
@@ -42,8 +42,8 @@ export function ImageMasonry() {
                     src={datas.cloud_image_url}
                     loading="lazy"
                     style={{
-                      borderBottomLeftRadius: 4,
-                      borderBottomRightRadius: 4,
+                      borderBottomLeftRadius: 6,
+                      borderBottomRightRadius: 6,
                       display: "block",
                       width: "100%",
                     }}
