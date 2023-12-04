@@ -37,21 +37,11 @@ export function HomePage() {
 
   return (
     <div>
-      <Typography
-        variant="h1"
-        align="center"
-        color="#1c21d1"
-        sx={{ fontWeight: "bold", m: 1, fontSize: 55 }}
-        paddingTop={2}
-      >
-        {" "}
-        Jóvenes en STEM
-      </Typography>
       <div>
         <Box
           sx={{
             background:
-              "linear-gradient(to right, white 0%, #5458ca 30%, #575cfc 70%, white 100%)",
+            "linear-gradient(to right, #eaebff  0%, #131ae4 20%, #131ae4  80%, #eaebff   100%)",
             boxShadow:
               "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
           }}
@@ -59,6 +49,19 @@ export function HomePage() {
           <SwipeableTextMobileStepper images={images} />
         </Box>
       </div>
+      <Typography
+        variant="h1"
+        align="center"
+        color="#000000"
+        sx={{ fontWeight: "bold", m: 1, fontSize: 55 }}
+        paddingTop={7}
+      >
+        Jóvenes en STEM
+      </Typography>
+      <Box sx={{ p: 1, borderBottom: 4, borderColor: "#1c21d1", marginLeft:'45%', marginRight:'45%'}}/>
+      
+        
+     
       <ImageMasonry />
       <Container maxWidth="m" style={{ marginTop: "7%" }}>
         <Box sx={{ p: 1, borderLeft: 4, borderColor: "#1c21d1" }}>
