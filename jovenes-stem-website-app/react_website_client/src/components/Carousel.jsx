@@ -45,7 +45,6 @@ export function SwipeableTextMobileStepper({ images }) {
                 component="div"
                 sx={{
                   position: "relative",
-                  overflow: "hidden",
                   width: "100%",
                 }}
               >
