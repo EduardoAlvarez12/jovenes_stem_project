@@ -150,6 +150,7 @@ export function Navigation() {
               variant="contained"
               color="indigo"
               sx={{ borderRadius: "8px" }}
+              onClick={() => window.scrollTo(0, document.body.scrollHeight)}
             >
               Contáctanos
             </Button>
