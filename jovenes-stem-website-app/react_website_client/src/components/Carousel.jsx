@@ -31,7 +31,6 @@ export function SwipeableTextMobileStepper({ images }) {
 
   return (
     <Box sx={{ width: "60%", flexGrow: 1, mx: "auto" }}>
-     
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
@@ -48,14 +47,33 @@ export function SwipeableTextMobileStepper({ images }) {
                   width: "100%",
                 }}
               >
-                <img
-                  src={step.cloud_image_url}
-                  alt={step.title}
-                  style={{
-                    display: "block",
-                    width: "100%",
-                  }}
-                />
+                {/* si el campo acción no está vacío se rederige
+                a una página, ej: formulario de inscripción */}
+                {step.action ? (
+                  <a
+                    href={step.action}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={step.cloud_image_url}
+                      alt={step.title}
+                      style={{
+                        display: "block",
+                        width: "100%",
+                      }}
+                    />
+                  </a>
+                ) : (
+                  <img
+                    src={step.cloud_image_url}
+                    alt={step.title}
+                    style={{
+                      display: "block",
+                      width: "100%",
+                    }}
+                  />
+                )}
                 <Typography
                   variant="caption"
                   display="block"
