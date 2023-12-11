@@ -18,7 +18,7 @@ export function Testimonials({ testimonialsData }) {
               <img src={step.cloud_image_url} alt={step.title} />
               <div className="myCarousel">
                 <h3>{step.title}</h3>
-                <p>{step.description}</p>
+                <div>{step.description}</div>
               </div>
             </div>
           </div>
