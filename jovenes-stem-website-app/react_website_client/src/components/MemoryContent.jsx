@@ -35,7 +35,7 @@ export function ControlledAccordions() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "80%" }}>
       {groupedData.map(({ year, images }, index) => (
         <Accordion
           key={index}
@@ -44,7 +44,7 @@ export function ControlledAccordions() {
           style={{ width: "80%", margin: "auto" }}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            
             aria-controls={`panel${index + 1}bh-content`}
             id={`panel${index + 1}bh-header`}
           >
@@ -53,10 +53,11 @@ export function ControlledAccordions() {
           <AccordionDetails>
             <Box
               sx={{
+                
+               
                 background:
-                  "linear-gradient(to right, white 0%, #1c21d1 30%, #1c21d1 70%, white 100%)",
-                boxShadow:
-                  "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
+                "linear-gradient(to right, #eaebff  0%, #131ae4 20%, #131ae4  80%, #eaebff   100%)",
+                 
               }}
             >
               <SwipeableTextMobileStepper images={images} />
