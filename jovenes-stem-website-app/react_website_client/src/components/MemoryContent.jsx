@@ -53,11 +53,8 @@ export function ControlledAccordions() {
           <AccordionDetails>
             <Box
               sx={{
-                
-               
-                background:
-                "linear-gradient(to right, #eaebff  0%, #131ae4 20%, #131ae4  80%, #eaebff   100%)",
-                 
+                boxShadow:
+                "20px 0 20px -20px rgb(7, 11, 235), -20px 0 20px -20px rgb(7, 11, 235)",
               }}
             >
               <SwipeableTextMobileStepper images={images} />
