@@ -1,5 +1,5 @@
 # JOVENES-STEM-WEBSITE
-Este repositorio aloja la API encargada de gestionar contenido y el frontend para consumir dicho servicio.
+Este repositorio aloja el panel de administración que permite gestionar la API encargada del contenido y el frontend para consumir dicho servicio.
 
 ## DESCARGA DEL PROYECTO
 1. git clone [enlace]
