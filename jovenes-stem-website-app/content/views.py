@@ -55,5 +55,7 @@ class YearGroupedImageViewSet(viewsets.ReadOnlyModelViewSet):
             grouped_images[image['year']].append(image)
 
         grouped_data = [{'year': year, 'images': images} for year, images in grouped_images.items()]
+        grouped_data.sort(key=lambda x: x['year'], reverse=True)
+
 
         return Response(grouped_data)
