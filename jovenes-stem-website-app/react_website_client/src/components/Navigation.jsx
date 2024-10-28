@@ -17,7 +17,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import ugbLogo from "../images/ugb_logo.jpg";
 
 const pages = [
-  { name: "Inicio", url: "home" },
+  { name: "Inicio", url: "" },
   { name: "Historia", url: "historia" },
   { name: "Memorias", url: "memorias" },
 ];
@@ -52,7 +52,7 @@ export function Navigation() {
 
           {/* Logo UGB Escritorio*/}
           <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
-            <Link to="/home">
+            <Link to="/">
               <Box
                 component="img"
                 src={ugbLogo}
@@ -108,7 +108,7 @@ export function Navigation() {
           </Box>
           {/* Logo UGB Móvil*/}
           <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-            <Link to="/home">
+            <Link to="/">
               <Box
                 component="img"
                 src={ugbLogo}
