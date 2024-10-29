@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 from rest_framework.response import Response
 from collections import defaultdict
-from .serializer import SectionSerializer, ImageSerializer, TextContentSerializer, TextContentImageSerializer, YearGroupedImageSerializer
+from .serializer import SectionSerializer, ImageSerializer, TextContentSerializer, TextContentImageSerializer, TextContentOnlySerializer, YearGroupedImageSerializer
 from .models import Section, Image, TextContent, TextContentImage
 
 class SectionView(viewsets.ReadOnlyModelViewSet):
@@ -20,6 +20,20 @@ class ImageView(viewsets.ReadOnlyModelViewSet):
         if section_name is not None:
             queryset = queryset.filter(section__name=section_name)
         return queryset    
+
+class TextContentOnlyView(viewsets.ReadOnlyModelViewSet):
+    serializer_class = TextContentOnlySerializer
+    def get_queryset(self):
+        """
+        Optionally restricts the returned text content to a given section,
+        by filtering against a `section` query parameter in the URL.
+        """
+        queryset = TextContent.objects.all().order_by('id')
+        section_name = self.request.query_params.get('section')
+        if section_name is not None:
+            queryset = queryset.filter(section__name=section_name)
+        return queryset
+    
 
 class TextContentView(viewsets.ReadOnlyModelViewSet):
     serializer_class = TextContentSerializer

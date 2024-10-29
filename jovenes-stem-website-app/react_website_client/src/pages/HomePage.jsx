@@ -4,12 +4,17 @@ import { SwipeableTextMobileStepper } from "../components/Carousel";
 import Box from "@mui/material/Box";
 import { Container, Typography } from "@mui/material";
 import { ImageMasonry } from "../components/Masonry";
-import { CarouselImages, testimonialsContent } from "../components/HomeContent";
+import {
+  CarouselImages,
+  HomeText,
+  testimonialsContent,
+} from "../components/HomeContent";
 import { Testimonials } from "../components/Testimonials";
 
 export function HomePage() {
   const images = CarouselImages();
   const testimonialsData = testimonialsContent();
+  const youthInStemData = HomeText();
 
   return (
     <div>
@@ -17,7 +22,7 @@ export function HomePage() {
         <Box
           sx={{
             background:
-            "linear-gradient(to right, #eaebff  0%, #131ae4 20%, #131ae4  80%, #eaebff   100%)",
+              "linear-gradient(to right, #eaebff  0%, #131ae4 20%, #131ae4  80%, #eaebff   100%)",
             boxShadow:
               "10px 0 10px -10px rgba(0, 0, 0, 0.3), -10px 0 10px -10px rgba(0, 0, 0, 0.3)",
           }}
@@ -34,10 +39,20 @@ export function HomePage() {
       >
         Jóvenes en STEM
       </Typography>
-      <Box sx={{ p: 1, borderBottom: 4, borderColor: "#1c21d1", marginLeft:'45%', marginRight:'45%'}}/>
-      
-        
-     
+      <Box
+        sx={{
+          p: 1,
+          borderBottom: 4,
+          borderColor: "#1c21d1",
+          marginLeft: "45%",
+          marginRight: "45%",
+        }}
+      />
+      <div id="paragraph-big">
+        {youthInStemData.length > 0 &&
+          youthInStemData.map((item, index) => <p key={index}>{item.text}</p>)}
+      </div>
+
       <ImageMasonry />
       <Container maxWidth="m" style={{ marginTop: "7%" }}>
         <Box sx={{ p: 1, borderLeft: 4, borderColor: "#1c21d1" }}>

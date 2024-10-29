@@ -15,3 +15,11 @@ export const getHistoryCarouselContent = () => {
         }
     })
 }
+
+export const getHistoryOurHistory = () => {
+    return axios.get('http://127.0.0.1:8000/content/api/text-contents-only/', {
+        params: {
+            section: 'Historia-Nuestra-Historia'
+        }
+    })
+}

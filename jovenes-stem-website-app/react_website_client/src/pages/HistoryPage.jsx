@@ -3,11 +3,16 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import { SwipeableTextMobileStepper } from "../components/Carousel";
-import { HistoryText, HistoryImages } from "../components/HistoryContent";
+import {
+  HistoryText,
+  HistoryImages,
+  HistoryTextOurHistory,
+} from "../components/HistoryContent";
 
 export function HistoryPage() {
   const { years, data } = HistoryText();
   const images = HistoryImages();
+  const ourHistoryData = HistoryTextOurHistory();
 
   return (
     <div>
@@ -22,26 +27,9 @@ export function HistoryPage() {
         <SwipeableTextMobileStepper images={images} />
       </Box>
       <Typography id="title-history">Nuestra Historia</Typography>
-      <div id="paragraph-history">
-        <p>
-          Jóvenes en STEM nació en el año 2016 bajo el nombre de Tecnogirls, un
-          proyecto con el objetivo de motivar el talento por la tecnología y la
-          innovación en estudiantes del género femenino que estén a punto de
-          iniciar sus estudios universitarios.
-        </p>
-        <p>
-          Actualmente, Jóvenes en STEM continúa en ejecución con nuevos
-          participantes cada año indistintamente de su género desde el año 2023.
-        </p>
-        <p>
-          Este proyecto es promovido a través de la Facultad de Ciencia y
-          Tecnología y está orientado a potenciar el interés por la ciencia, la
-          tecnología, la ingeniería y las matemáticas entre jóvenes estudiantes,
-          sin importar su género. El programa busca ofrecer una plataforma
-          inclusiva donde todos los participantes puedan desarrollar sus
-          habilidades y conocimientos en STEM, fomentando un ambiente de
-          igualdad y diversidad.
-        </p>
+      <div id="paragraph-big">
+        {ourHistoryData.length > 0 &&
+          ourHistoryData.map((item, index) => <p key={index}>{item.text}</p>)}
       </div>
 
       <div className="years-container">

@@ -27,6 +27,11 @@ class TextContentSerializer(serializers.ModelSerializer):
         images = Image.objects.filter(textcontentimage__text_content=obj)
         return ImageSerializer(images, many=True).data
 
+class TextContentOnlySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TextContent
+        fields = ('id', 'title', 'text', 'year', 'section')
+
 class YearGroupedImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Image
