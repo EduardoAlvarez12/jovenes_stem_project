@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Container, Typography,Card,CardContent,CardMedia,Box,Grid, CardActionArea } from "@mui/material";
 import { getHistoryContent } from '../api/history.api';
 import { getHistoryCarouselContent } from '../api/history.api';
+import { getHistoryOurHistory } from '../api/history.api'
 
 const HistoryText = () => {
   const [historyData, setHistoryData] = useState([]);
@@ -47,9 +48,26 @@ const HistoryImages = () => {
     };
   }, [])
 
-  
-
   return imagesData;
 };
 
-export { HistoryText, HistoryImages };
+const HistoryTextOurHistory = () => {
+  const [ourHistoryData, setOurHistoryData] = useState([]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    async function loadOurHistory() {
+      const res = await getHistoryOurHistory({ signal: controller.signal });
+      setOurHistoryData(res.data);
+    }
+    loadOurHistory();
+
+    return () => {
+      controller.abort();
+    };
+  }, [])
+
+  return ourHistoryData;
+};
+
+export { HistoryText, HistoryImages, HistoryTextOurHistory };

@@ -16,6 +16,14 @@ export const getHomeCarouselContent = () => {
     })
 }
 
+export const getHomeYouthInSTEM = () => {
+    return axios.get('http://127.0.0.1:8000/content/api/text-contents-only/', {
+        params: {
+            section: 'Inicio-Jovenes-En-STEM'
+        }
+    })
+}
+
 export const getHomeTestimonialsContent = () => {
     return axios.get('http://127.0.0.1:8000/content/api/images/', {
         params: {
