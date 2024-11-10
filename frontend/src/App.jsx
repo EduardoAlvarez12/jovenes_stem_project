@@ -3,6 +3,7 @@ import { HomePage } from "./pages/HomePage";
 import { HistoryPage } from "./pages/HistoryPage";
 import { MemoryPage } from "./pages/MemoryPage";
 import { Navigation } from "./components/Navigation";
+import { NotFound } from "./components/errors/NotFound";
 import { Footer } from "./components/footer";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -37,6 +38,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/historia" element={<HistoryPage />} />
             <Route path="/memorias" element={<MemoryPage />} />
+            {/* Capturar todas las otras rutas para la página 404 */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
       </ThemeProvider>

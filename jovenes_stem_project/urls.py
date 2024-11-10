@@ -21,3 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('content/', include('content.urls'))
 ]
+
+admin.site.site_title = "Administración Jóvenes en STEM"
+admin.site.site_header = "Gestor de Contenido de Jóvenes en STEM"
+admin.site.index_title = "Administración Jóvenes en STEM"
