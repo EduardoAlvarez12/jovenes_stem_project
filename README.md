@@ -1,26 +1,28 @@
 # JOVENES-STEM-WEBSITE
-Este repositorio aloja el panel de administración que permite gestionar la API encargada del contenido y el frontend para consumir dicho servicio.
+Este repositorio aloja:
+1. Una API y un Panel de Administración para la gestión de contenido (/content)
+2. El sitio web del proyecto jóvenes en stem, cliente de la API (/frontend)
 
-## DESCARGA DEL PROYECTO
+El panel de administración permite gestionar el contenido de la API para el sitio web (frontend) del proyecto jóvenes en STEM.
+
+## REALIZAR CAMBIOS
 1. git clone [enlace]
-
 2. Preparar su propia rama como entorno de trabajo local:
 3. cd [repositorio]
 4. git branch [rama-tarea-que-esten-trabajando]
 5. git checkout [rama-tarea-que-esten-trabajando]
 
 ## EJECUTAR EL FRONTEND
-1. colocarse en la carpeta /react_website_cliente
+1. colocarse en la carpeta /frontend
 2. npm install --force
 3. npm run dev
 
 ## EJECUTAR EL BACKEND 
-1. colocarse en la carpeta /jovenes-stem-website-app
-2. pip install -r requirements.txt
-3. python manage.py migrate
-4. python manage.py createsuperuser
-5. python manage.py runserver
-6. entrar a http://127.0.0.1:8000/content/api/
+1. entrar en la carpeta /jovenes-stem-website
+2. si no se tienen las librerías: pip install -r requirements.txt
+3. python manage.py createsuperuser
+4. python manage.py runserver
+5. entrar a http://127.0.0.1:8000/content/api/
 
 ## REALIZAR UN PUSH
 1. colocarse en la carpeta y rama adecuada
@@ -29,6 +31,6 @@ Este repositorio aloja el panel de administración que permite gestionar la API 
 4. git push origin [rama-tarea-que-esten-trabajando]
 
 ## REALIZAR UN PULL REQUEST
-1. realizar un pull request desde el repositorio de GitHub
-2. una vez aprobado se mezclara su rama con la main
+1. realizar el pull request desde el repositorio de GitHub
+2. una vez aprobado se mezclará su rama con la main
 3. es importante mantener su rama propia actualizada
