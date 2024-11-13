@@ -16,13 +16,15 @@ El panel de administración permite gestionar el contenido de la API para el sit
 1. colocarse en la carpeta /frontend
 2. npm install --force
 3. npm run dev
+4. el sitio se ejecuta en: http://localhost:5173/
 
 ## EJECUTAR EL BACKEND 
 1. entrar en la carpeta /jovenes-stem-website
 2. si no se tienen las librerías: pip install -r requirements.txt
 3. python manage.py createsuperuser
 4. python manage.py runserver
-5. entrar a http://127.0.0.1:8000/content/api/
+5. para entrar a la API http://127.0.0.1:8000/content/api/
+6. para entra al panel de gestión de contenido http://127.0.0.1:8000/admin
 
 ## REALIZAR UN PUSH
 1. colocarse en la carpeta y rama adecuada
