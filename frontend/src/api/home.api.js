@@ -1,7 +1,9 @@
 import axios from 'axios'
 
+const API_BASE_URL = import.meta.env.VITE_DJANGO_API_BASE_URL;
+
 export const getHomeContent = () => {
-    return axios.get('http://127.0.0.1:8000/content/api/images/', {
+    return axios.get(`${API_BASE_URL}/images/`, {
         params: {
             section: 'Inicio-Que-Hacemos'
         }
@@ -9,7 +11,7 @@ export const getHomeContent = () => {
 }
 
 export const getHomeCarouselContent = () => {
-    return axios.get('http://127.0.0.1:8000/content/api/images/', {
+    return axios.get(`${API_BASE_URL}/images/`, {
         params: {
             section: 'Inicio-Carrusel'
         }
@@ -17,7 +19,7 @@ export const getHomeCarouselContent = () => {
 }
 
 export const getHomeYouthInSTEM = () => {
-    return axios.get('http://127.0.0.1:8000/content/api/text-contents-only/', {
+    return axios.get(`${API_BASE_URL}/text-contents-only/`, {
         params: {
             section: 'Inicio-Jovenes-En-STEM'
         }
@@ -25,7 +27,7 @@ export const getHomeYouthInSTEM = () => {
 }
 
 export const getHomeTestimonialsContent = () => {
-    return axios.get('http://127.0.0.1:8000/content/api/images/', {
+    return axios.get(`${API_BASE_URL}/images/`, {
         params: {
             section: 'Inicio-Voces-Participantes'
         }

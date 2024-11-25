@@ -1,7 +1,9 @@
 import axios from 'axios'
 
+const API_BASE_URL = import.meta.env.VITE_DJANGO_API_BASE_URL;
+
 export const getMemoryContent = ()=>{
-    return axios.get('http://127.0.0.1:8000/content/api/year-grouped-image/',{
+    return axios.get(`${API_BASE_URL}/year-grouped-image/`,{
         params:{
             section: 'Memorias'       
         }
